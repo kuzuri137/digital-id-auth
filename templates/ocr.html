@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        img#user {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body p-0">
+                    <div class="col-4">
+                        <img src="/static/images/61385888_2353519608268796_4998871264257900544_n.png">
+                    </div>
+                    <hr class="my-5">
+                    <div class="row p-5">
+                        <div class="col-md-6">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>First Name:</td>
+                                    <td id="first_name"></td>
+                                </tr>
+                                <tr>
+                                    <td>Last Name:</td>
+                                    <td id="last_name"></td>
+                                </tr>
+                                <tr>
+                                    <td>ID:</td>
+                                    <td id="id"></td>
+                                </tr>
+                                <tr>
+                                    <td>Date of Birth:</td>
+                                    <td id="dob"></td>
+                                </tr>
+                                <tr>
+                                    <td>Height:</td>
+                                    <td id="height"></td>
+                                </tr>
+                                <tr>
+                                    <td>Blood Group:</td>
+                                    <td id="group"></td>
+                                </tr>
+                                <tr>
+                                    <td>Gender:</td>
+                                    <td id="sex"></td>
+                                </tr>
+                                <tr>
+                                    <td>Address:</td>
+                                    <td id="address"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <img id="user" src="">
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row-reverse bg-dark text-white p-4">
+                        <div class="py-3 px-5 text-right">
+                            <div class="mb-2">Automatic KYC Web application</div>
+                            <div class="h2 font-weight-light">By Banco Natural</div>
+                        </div>
+
+                        <div class="py-3 px-5 text-right">
+                            <div class="mb-2">@2020 All Rights Reserved</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-light mt-5 mb-5 text-center small">by : <a class="text-light" target="_blank"
+                                                                href="http://totoprayogo.com">totoprayogo.com</a></div>
+
+</div>
+</body>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<script>
+    $(document).ready(function(){
+        var res = {{data|tojson}};
+        console.log(res);
+        for(i in res){
+            console.log(i);
+            if(i==="id"){
+                $("#id").html(res[i]);
+            }
+            if(i==="first_name"){
+                $("#first_name").html(res[i][0] +" "+ res[i][1]);
+            }
+            if(i==="last_name"){
+                $("#last_name").html(res[i][0] +" "+ res[i][1]);
+            }
+            if(i==="hgs"){
+                $("#height").html(res[i][0]);
+            }
+            if(i==="hgs"){
+                $("#group").html(res[i][1]);
+            }
+            if(i==="hgs"){
+                $("#sex").html(res[i][2]);
+            }
+            if(i==="dob"){
+                $("#dob").html(res[i]);
+            }
+            if(i==="address"){
+                $("#address").html(res[i][0]+" "+res[i][1]);
+            }
+            if(i==="img"){
+                $("#user").attr("src", res[i]);
+            }
+        }
+    });
+
+
+
+
+
+
+</script>
+</html>

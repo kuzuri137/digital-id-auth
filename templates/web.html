@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+       td.upload-itm {
+    padding-top: 17px;
+    display: block;
+}
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body p-0">
+                    <div class="col-4">
+                        <img src="/static/images/61385888_2353519608268796_4998871264257900544_n.png">
+                    </div>
+                    <hr class="my-5">
+                    <div class="row p-5">
+                        <div class="col-md-6">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td class="upload-itm">Upload Your ID card photo</td>
+                                    <td>
+                                        <form action="/ocr" enctype="multipart/form-data" method="post">
+                                            <label class="btn btn-primary">
+                                                Browse <input type="file" name="file" hidden >
+                                            </label>
+                                            <input type="submit" value="Extract" class="btn btn-success" style="margin-top: -9px;">
+                                        </form>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row-reverse bg-dark text-white p-4">
+                        <div class="py-3 px-5 text-right">
+                            <div class="mb-2">Automatic KYC Web application</div>
+                            <div class="h2 font-weight-light">By Banco Natural</div>
+                        </div>
+
+                        <div class="py-3 px-5 text-right">
+                            <div class="mb-2">@2020 All Rights Reserved</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-light mt-5 mb-5 text-center small">by : <a class="text-light" target="_blank"
+                                                                href="http://totoprayogo.com">totoprayogo.com</a></div>
+
+</div>
+</body>
+</html>
