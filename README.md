@@ -1,4 +1,4 @@
-# Welcome to Banco Natural OCR for eKYC
+# OCR for eKYC and digital authentication
 Introduction
 --------------------
 This is an application to perform OCR for ID card images with an accuracy vs fail safe algorithm
